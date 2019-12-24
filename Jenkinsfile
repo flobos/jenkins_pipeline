@@ -4,11 +4,11 @@ pipeline {
         stage('clone the repo and removing the existing one')
         {
           steps {
-              sh "sudo rm -rf /home/coreopt1/project"
-              sh "cd /home/coreopt1/"
-              sh "mkdir -p /home/coreopt1/project"
-              sh "cd /home/coreopt1/project"
-              sh "git clone https://github.com/PacktPublishing/Develop-and-Deploy-Modern-Web-Applications-with-Docker-Video-.git /home/coreopt1/project"
+              sh "sudo rm -rf /home/flobos/project"
+              sh "cd /home/flobos/"
+              sh "mkdir -p /home/flobos/project"
+              sh "cd /home/flobos/project"
+              sh "git clone https://github.com/flobos/jenkins_pipeline.git /home/flobos/project"
                
                }
          }
@@ -17,7 +17,7 @@ pipeline {
          {
            steps 
            {
-              sh "sudo cp /home/coreopt1/project/www/html/index.html /var/www/html/"
+              sh "sudo cp /home/flobos/project/www/html/index.html /var/www/html/"
            }
           }
           
